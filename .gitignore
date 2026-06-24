@@ -1,0 +1,45 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.suo
+*.user
+
+# Logs
+*.log
+logs/
+
+# Environment & Secrets
+.env
+.env.local
+.env.*
+!.env.example
+
+# Node
+node_modules/
+
+# .NET build artifacts
+bin/
+obj/
+TestResults/
+publish/
+publish_output/
+*.pdb
+
+# Next.js
+.next/
+out/
+
+# Upload / user data (KYC documents, identity files)
+uploads/
+storage/
+temp/
+kyc/
+
+# Docker local volumes
+pgdata/

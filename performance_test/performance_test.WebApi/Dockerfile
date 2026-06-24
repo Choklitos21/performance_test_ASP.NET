@@ -1,13 +1,14 @@
-﻿FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS base
-USER $APP_UID
+FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS base
 WORKDIR /app
 EXPOSE 8080
-EXPOSE 8081
 
 FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["performance_test.WebApi/performance_test.WebApi.csproj", "performance_test.WebApi/"]
+COPY ["performance_test.Application/performance_test.Application.csproj", "performance_test.Application/"]
+COPY ["performance_test.Infrastructure/performance_test.Infrastructure.csproj", "performance_test.Infrastructure/"]
+COPY ["performance_test.Domain/performance_test.Domain.csproj", "performance_test.Domain/"]
 RUN dotnet restore "performance_test.WebApi/performance_test.WebApi.csproj"
 COPY . .
 WORKDIR "/src/performance_test.WebApi"

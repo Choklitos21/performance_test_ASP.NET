@@ -1,0 +1,36 @@
+# Environment & Secrets
+.env
+.env.local
+.env.*
+!.env.example
+
+# Local appsettings overrides (never commit files with real credentials)
+appsettings.local.json
+appsettings.*.local.json
+
+# Build artifacts
+bin/
+obj/
+TestResults/
+publish/
+publish_output/
+
+# Debug symbols
+*.pdb
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.suo
+*.user
+
+# Upload / user data (KYC documents, identity files)
+uploads/
+storage/
+temp/
+kyc/
+
+# Logs
+*.log
+logs/

@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFramework>net10.0</TargetFramework>
@@ -7,9 +7,14 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Common\DTOs\" />
-      <Folder Include="Common\Interfaces\" />
-      <Folder Include="Services\" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.6" />
+        <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.6.1" />
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.6.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\performance_test.Domain\performance_test.Domain.csproj" />
+        <ProjectReference Include="..\performance_test.Infrastructure\performance_test.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>
